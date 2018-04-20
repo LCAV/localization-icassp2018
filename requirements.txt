@@ -1,3 +1,2 @@
-pylocus=1.0.1
-seaborn>0.8.1
-cvxpy
+pylocus==1.0.1
+seaborn>=0.8.1
