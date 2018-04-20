@@ -2,7 +2,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from pylocus.basics import vector_from_matrix
-from cvxpy import *
 
 FOLDER = 'many_iterations'
 FOLDER = 'many_iterations_original'
@@ -87,6 +86,7 @@ def parse_options_gaussian(options):
 
 
 def clean_angles(Om, print_out):
+    from cvxpy import Semidef, Variable, Mnimize, Problem 
     E = len(Om)
     X = Semidef(E)
     Noise = Variable(E, E)
@@ -207,5 +207,4 @@ if __name__ == '__main__':
 
     # Run simulations.
     save_idx = int(time.time())  # appendix to add to name that is being saved
-    #save_idx = None
     run_simulation(methods, options, save_idx)
