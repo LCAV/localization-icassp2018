@@ -1,2 +1,2 @@
-pylocus==1.0.1
+pylocus==1.0.2
 seaborn>=0.8.1

@@ -20,9 +20,9 @@ This repository contains the following components:
 
 This repository relies on a python toolbox called _pylocus_, which contains implementations of various angle- and distance based localization algorithms.   
 
-The source code and installation instructions can be found at [https:/github.com/LCAV/pylocus](https:/github.com/LCAV/pylocus). 
+The source code and installation instructions can be found at [https://github.com/LCAV/pylocus](https:/github.com/LCAV/pylocus). 
 
-The results were created using the release 1.0.1 of the package. If you use pip, you can install it and other required packages by running
+The results were created using the release 1.0.2 of the package. If you use pip, you can install it and other required packages by running
 
 ```bash
 pip install -r requirements.txt
