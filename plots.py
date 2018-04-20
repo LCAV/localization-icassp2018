@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 #
 # Copyright © 2018 Frederike Duembgen <frederike.duembgen@gmail.com>
-#
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -73,7 +72,6 @@ def plot_against_angles(dict_methods, chosen_sig, sigmas, epsilons, saveas, titl
     for i, sig in enumerate(chosen_sig):
         for m in dict_methods.keys():
             label = m if i == 0 else None
-            print(label)
             rmses = dict_methods[m]['rmses']
             ls = dict_methods[m]['linestyle']
             ms = dict_methods[m]['marker']
