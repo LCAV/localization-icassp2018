@@ -2,9 +2,7 @@
 
 This repository contains the code presented at the IEEE International Conference on Acoustic Speech and Signal Processing 2018 in Calgary CA. 
 
-Authors: 
-
-Gilles Baechler', Frederike Duembgen', Golnooshsadat Elhami', Miranda Krekovic', Robin Scheibler, Adam Scholefield and Martin Vetterli. 
+Authors: Gilles Baechler', Frederike Duembgen', Golnooshsadat Elhami', Miranda Krekovic', Robin Scheibler, Adam Scholefield and Martin Vetterli. 
 
 ' equal contributions. 
 
