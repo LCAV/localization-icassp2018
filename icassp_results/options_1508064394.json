@@ -1,0 +1,1 @@
+{"N": 6, "d": 2, "n_sigma": 10, "n_it": 20, "n_rhos": 11, "min_sigma": 0.01, "max_sigma": 0.5, "min_rho": 0.01, "max_rho": 0.5, "print_out": false, "gaussian": true}

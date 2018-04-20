@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 from pylocus.basics import vector_from_matrix
 from cvxpy import *
 
-#FOLDER = 'gaussian_results_corrected'
-FOLDER = 'reproduce_test'
+FOLDER = 'many_iterations'
+FOLDER = 'many_iterations_original'
 
 
 def get_noisy_inner(Om_original, dm_original, rho, sigmad):
@@ -108,7 +108,7 @@ def clean_angles(Om, print_out):
 
 
 def run_simulation(methods, options, save_idx=None):
-    from pylocus.algorithms import reconstruct_emds, reconstruct_mds, reconstruct_smds
+    from pylocus.algorithms import reconstruct_emds, reconstruct_mds, reconstruct_cdm
     from pylocus.basics import rmse
     from pylocus.point_set import edm_from_dm
     if options['gaussian']:
@@ -156,7 +156,7 @@ def run_simulation(methods, options, save_idx=None):
                         dict_methods[key]['estimate'] = reconstruct_emds(
                             edm, real_points=points.points, Om=clean_Om)
                     elif key == 'CDM':
-                        dict_methods[key]['estimate'] = reconstruct_smds(
+                        dict_methods[key]['estimate'] = reconstruct_cdm(
                             dm, absolute_angles, real_points=points.points)
                     else:
                         raise NameError('Unknown method', key)
@@ -183,11 +183,11 @@ if __name__ == '__main__':
 
     # Choose simulation paramters.
     options = {
-        'N': 5,  # number of points to localize
+        'N': 6,  # number of points to localize
         'd': 2,  # dimension of points
-        'n_sigma': 3,  # was 10, number of distance noise levels to run for
-        'n_it': 2, # number of point sets to average over. (100 for smooth curves)
-        'n_rhos': 4,  # number of angle noises to test for.
+        'n_sigma': 10,  # was 10, number of distance noise levels to run for
+        'n_rhos': 11,  # number of angle noises to test for.
+        'n_it': 100, # number of point sets to average over. (100 for smooth curves)
         'min_sigma': 0.01,  # minimum distance noise
         'max_sigma': 0.5,  # maximum distance noise
         'min_rho': 0.01,  # minimum angle noise
